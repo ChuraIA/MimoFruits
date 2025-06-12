@@ -6,7 +6,7 @@ import paths, { rootPaths } from './paths';
 import PageLoader from '../components/loading/PageLoader';
 import Splash from 'components/loading/Splash';
 
-const App = lazy(() => import('App'));
+const MimoFruitsApp = lazy(() => import('MimoFruitsApp'));
 const MainLayout = lazy(async () => {
   return Promise.all([
     import('layouts/main-layout'),
@@ -42,7 +42,7 @@ const routes: RouteObject[] = [
   {
     element: (
       <Suspense fallback={<Splash />}>
-        <App />
+        <MimoFruitsApp />
       </Suspense>
     ),
     children: [
